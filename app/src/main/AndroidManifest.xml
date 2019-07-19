@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".SumTwoNumberActivity"></activity>
+        <activity android:name=".CheckboxActivity"></activity>
+        <activity android:name=".ToggleButtonsActivity" />
+        <activity android:name=".SumTwoNumberActivity" />
         <activity android:name=".FirstActivity" />
         <activity android:name=".NoTitleActivity" />
         <activity
