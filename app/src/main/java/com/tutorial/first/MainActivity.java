@@ -2,6 +2,7 @@ package com.tutorial.first;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,6 +12,9 @@ import android.widget.Toast;
 import android.widget.ToggleButton;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.tutorial.intents.CallActivitiesActivity;
+import com.tutorial.intents.VisitWebActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -38,6 +42,8 @@ public class MainActivity extends AppCompatActivity {
         toast.setGravity(Gravity.CENTER_VERTICAL, 0, 0);
         toast.setView(layout); // Setting the view of custom toast layout
         toast.show();
+
+        Log.d("lifecycle", "onCreate invoked");
     }
 
     public void goNoTitle(View v) {
@@ -65,4 +71,25 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void goVisitWeb(View v) {
+        Intent intent = new Intent(MainActivity.this, VisitWebActivity.class);
+        startActivity(intent);
+    }
+
+    public void goCallActivities(View v) {
+        Intent intent = new Intent(MainActivity.this, CallActivitiesActivity.class);
+        startActivity(intent);
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        Log.d("lifecycle", "onStart invoked");
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        Log.d("lifecycle", "onStop invoked");
+    }
 }

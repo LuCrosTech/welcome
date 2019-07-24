@@ -7,6 +7,36 @@
     tools:context=".MainActivity">
 
     <Button
+        android:id="@+id/callActivitiesBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="8dp"
+        android:onClick="goVisitWeb"
+        android:text="Call Activities"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/goVisitWebBtn"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/goVisitWebBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="8dp"
+        android:onClick="goVisitWeb"
+        android:text="Visit Web"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/goCheckBoxBtn"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
         android:id="@+id/goCheckBoxBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
